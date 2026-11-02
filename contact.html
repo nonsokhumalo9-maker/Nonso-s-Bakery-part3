@@ -6,19 +6,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact Us | Nonso's Bakery</title>
+<title>Contact Nonso's Bakery | Cakes, Bread & Bakery Orders</title>
 
 <meta name="description"
-content="Contact Nonso's Bakery for cake orders, pastries, breads, cupcakes, and bakery enquiries.">
+content="Contact Nonso's Bakery for custom cakes, pastries, breads, bulk orders and bakery enquiries in Johannesburg.">
 
 <meta name="keywords"
-content="contact bakery, cakes, bread, pastries, bakery contact">
+content="bakery contact, cake orders, bread orders, pastries, Johannesburg bakery">
 
 <meta name="author"
 content="Nonso Sinethemba Khumalo">
 
 <meta name="robots"
 content="index, follow">
+
+<meta property="og:title"
+content="Nonso's Bakery">
+
+<meta property="og:description"
+content="Fresh breads, cakes and pastries baked daily.">
+
+<meta property="og:type"
+content="website">
 
 <link rel="stylesheet" href="styles/style.css">
 
@@ -50,9 +59,9 @@ content="index, follow">
 
 <p>
 
-We would love to hear from you. Whether you need a custom cake,
-birthday treats, wedding desserts, or freshly baked bread,
-our team is ready to assist you.
+We would love to hear from you. Whether you would like
+a custom cake, fresh bread, pastries for an event,
+or information about our services, we are here to help.
 
 </p>
 
@@ -72,7 +81,7 @@ our team is ready to assist you.
 
 <section>
 
-<h2>Send Us a Message</h2>
+<h2>Contact Form</h2>
 
 <form id="contactForm">
 
@@ -94,11 +103,72 @@ id="phone"
 placeholder="Phone Number"
 required>
 
+<label for="enquiryType">
+
+Type of Enquiry
+
+</label>
+
+<select
+id="enquiryType"
+required>
+
+<option value="">
+
+Select an Option
+
+</option>
+
+<option>
+
+Cake Order
+
+</option>
+
+<option>
+
+Bread Order
+
+</option>
+
+<option>
+
+Pastry Order
+
+</option>
+
+<option>
+
+Bulk Order
+
+</option>
+
+<option>
+
+General Enquiry
+
+</option>
+
+</select>
+
 <textarea
 id="message"
 placeholder="Type your message here..."
 rows="6"
 required></textarea>
+
+<label>
+
+<input
+type="checkbox"
+id="terms"
+required>
+
+I agree to be contacted regarding my enquiry.
+
+</label>
+
+<br>
 
 <button type="submit">
 
@@ -118,19 +188,19 @@ Send Message
 
 <button class="accordion">
 
-View Bakery Opening Hours
+View Opening Hours
 
 </button>
 
 <div class="panel">
 
-<p>Monday - Friday: 08:00 AM - 06:00 PM</p>
+<p>Monday – Friday: 08:00 – 18:00</p>
 
-<p>Saturday: 09:00 AM - 04:00 PM</p>
+<p>Saturday: 09:00 – 16:00</p>
 
 <p>Sunday: Closed</p>
 
-<p>Public Holidays: 09:00 AM - 02:00 PM</p>
+<p>Public Holidays: 09:00 – 14:00</p>
 
 </div>
 
@@ -138,58 +208,23 @@ View Bakery Opening Hours
 
 <section>
 
-<h2>Our Location</h2>
-
-<p>
-
-Visit our bakery and experience the aroma of freshly baked bread,
-cakes, pastries, and desserts.
-
-</p>
+<h2>Visit Our Bakery</h2>
 
 <iframe
+
 src="https://www.google.com/maps?q=Johannesburg,South%20Africa&output=embed"
+
 width="100%"
+
 height="400"
+
 style="border:0;"
-allowfullscreen=""
+
+allowfullscreen
+
 loading="lazy">
 
 </iframe>
-
-</section>
-
-<section>
-
-<h2>Why Customers Love Us</h2>
-
-<div class="stats">
-
-<div class="stat-box">
-
-<h3>1500+</h3>
-
-<p>Happy Customers</p>
-
-</div>
-
-<div class="stat-box">
-
-<h3>850+</h3>
-
-<p>Cakes Sold</p>
-
-</div>
-
-<div class="stat-box">
-
-<h3>3200+</h3>
-
-<p>Orders Completed</p>
-
-</div>
-
-</div>
 
 </section>
 
@@ -210,10 +245,18 @@ All Rights Reserved.
 
 </p>
 
+<p>
+
+Follow Us:
+<a href="#">Facebook</a> |
+<a href="#">Instagram</a> |
+<a href="#">TikTok</a>
+
+</p>
+
 </footer>
 
 <script src="scripts/script.js"></script>
 
 </body>
-
 </html>

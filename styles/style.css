@@ -1,6 +1,7 @@
-/* ====================================
+/* =====================================
    NONSO'S BAKERY FINAL STYLESHEET
-==================================== */
+   WEDE5020 POE PART 3
+===================================== */
 
 /* RESET */
 
@@ -13,7 +14,7 @@
 /* BODY */
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     background: linear-gradient(to bottom, #fff8f0, #ffe5d9);
     color: #333;
     line-height: 1.6;
@@ -23,10 +24,10 @@ body {
 
 header {
     background: linear-gradient(
-    90deg,
-    #ff9a76,
-    #ff6f61,
-    #d65a31
+        90deg,
+        #ff9a76,
+        #ff6f61,
+        #d65a31
     );
 
     color: white;
@@ -44,8 +45,8 @@ header h1 {
 nav {
     display: flex;
     justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 nav a {
@@ -62,28 +63,47 @@ nav a:hover {
     color: #d65a31;
 }
 
-/* SECTION */
+/* MAIN CONTENT */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* SECTIONS */
 
 section {
     padding: 30px;
     text-align: center;
 }
 
-/* HERO */
-
-.hero img {
-    max-width: 100%;
-    border-radius: 15px;
-    margin-top: 20px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+section h2 {
+    margin-bottom: 15px;
+    color: #d65a31;
 }
 
-/* SEARCH BAR */
+section p {
+    margin-bottom: 10px;
+}
+
+/* HERO SECTION */
+
+.hero img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+/* INPUTS */
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-textarea {
+textarea,
+select {
 
     width: 80%;
     max-width: 600px;
@@ -99,432 +119,13 @@ textarea {
     border-radius: 10px;
 
     font-size: 1rem;
+
+    background-color: white;
 }
 
-/* BUTTONS */
+/* LABELS */
 
-button {
-
-    padding: 12px 25px;
-
-    background-color: #d65a31;
-
-    color: white;
-
-    border: none;
-
-    border-radius: 10px;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #b94824;
-}
-
-/* PRODUCT GRID */
-
-.product-grid {
-
-    display: grid;
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(250px, 1fr));
-
-    gap: 25px;
-
-    padding: 20px;
-}
-
-/* PRODUCT CARDS */
-
-.product-card {
-
-    background: white;
-
-    border-radius: 15px;
-
-    padding: 15px;
-
-    box-shadow:
-    0 4px 8px rgba(0,0,0,0.15);
-
-    transition: 0.3s;
-}
-
-.product-card:hover {
-
-    transform: translateY(-8px);
-
-    box-shadow:
-    0 8px 15px rgba(0,0,0,0.25);
-}
-
-.product-card img {
-
-    width: 100%;
-
-    height: 220px;
-
-    object-fit: cover;
-
-    border-radius: 12px;
-}
-
-/* PRICE */
-
-.price {
-
-    font-weight: bold;
-
-    color: #d65a31;
-
-    font-size: 1.2rem;
-
+label {
+    display: block;
     margin-top: 10px;
-}
-
-/* GALLERY */
-
-.gallery {
-
-    display: grid;
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(250px,1fr));
-
-    gap: 20px;
-}
-
-/* STATS SECTION */
-
-.stats {
-
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 25px;
-}
-
-.stat-box {
-
-    background: white;
-
-    padding: 25px;
-
-    min-width: 200px;
-
-    border-radius: 15px;
-
-    box-shadow:
-    0 4px 8px rgba(0,0,0,0.15);
-}
-
-.stat-box h3 {
-
-    color: #d65a31;
-
-    font-size: 2rem;
-}
-
-/* TESTIMONIALS */
-
-#testimonialBox {
-
-    max-width: 700px;
-
-    margin: auto;
-
-    background: white;
-
-    padding: 25px;
-
-    border-left: 6px solid #d65a31;
-
-    border-radius: 10px;
-
-    box-shadow:
-    0 4px 8px rgba(0,0,0,0.15);
-}
-
-/* BENEFITS */
-
-.benefits {
-
-    display: grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-
-    gap: 20px;
-}
-
-.benefit {
-
-    background: white;
-
-    padding: 20px;
-
-    border-radius: 15px;
-
-    box-shadow:
-    0 4px 8px rgba(0,0,0,0.15);
-}
-
-/* FORMS */
-
-form {
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-}
-
-textarea {
-    resize: vertical;
-}
-
-/* MODAL */
-
-.modal {
-
-    display: none;
-
-    position: fixed;
-
-    z-index: 1000;
-
-    left: 0;
-
-    top: 0;
-
-    width: 100%;
-
-    height: 100%;
-
-    background:
-    rgba(0,0,0,0.6);
-}
-
-.modal-content {
-
-    background: white;
-
-    width: 80%;
-
-    max-width: 500px;
-
-    margin: 10% auto;
-
-    padding: 25px;
-
-    border-radius: 15px;
-
-    text-align: center;
-}
-
-.close {
-
-    float: right;
-
-    font-size: 28px;
-
-    cursor: pointer;
-}
-
-/* LIGHTBOX */
-
-#lightbox {
-
-    display: none;
-
-    position: fixed;
-
-    justify-content: center;
-
-    align-items: center;
-
-    top: 0;
-
-    left: 0;
-
-    width: 100%;
-
-    height: 100%;
-
-    background:
-    rgba(0,0,0,0.85);
-
-    z-index: 2000;
-}
-
-#lightbox img {
-
-    max-width: 90%;
-
-    max-height: 90%;
-
-    border-radius: 12px;
-}
-
-#closeLightbox {
-
-    position: absolute;
-
-    top: 20px;
-
-    right: 30px;
-
-    color: white;
-
-    font-size: 40px;
-
-    cursor: pointer;
-}
-
-/* ACCORDION */
-
-.accordion {
-
-    width: 80%;
-
-    max-width: 700px;
-
-    margin: auto;
-}
-
-.panel {
-
-    max-height: 0;
-
-    overflow: hidden;
-
-    transition: max-height 0.4s ease;
-
-    background: white;
-
-    width: 80%;
-
-    max-width: 700px;
-
-    margin: auto;
-}
-
-/* SITEMAP */
-
-.sitemap-list {
-
-    text-align: left;
-
-    max-width: 800px;
-
-    margin: auto;
-}
-
-.sitemap-list li {
-
-    margin-bottom: 12px;
-}
-
-/* BACK TO TOP */
-
-#topBtn {
-
-    display: none;
-
-    position: fixed;
-
-    bottom: 30px;
-
-    right: 30px;
-
-    z-index: 999;
-
-    background: #d65a31;
-
-    color: white;
-
-    border: none;
-
-    border-radius: 50px;
-
-    padding: 12px 18px;
-}
-
-/* FOOTER */
-
-footer {
-
-    background:
-    linear-gradient(
-    90deg,
-    #d65a31,
-    #ff6f61
-    );
-
-    color: white;
-
-    text-align: center;
-
-    padding: 20px;
-
-    margin-top: 30px;
-}
-
-/* ANIMATIONS */
-
-.product-card,
-.stat-box,
-.benefit {
-
-    animation: fadeUp 1s ease;
-}
-
-@keyframes fadeUp {
-
-    from {
-
-        opacity: 0;
-
-        transform: translateY(20px);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform: translateY(0);
-
-    }
-}
-
-/* RESPONSIVE DESIGN */
-
-@media (max-width: 768px) {
-
-    nav {
-
-        flex-direction: column;
-
-        gap: 10px;
-    }
-
-    .stats {
-
-        flex-direction: column;
-    }
-
-    input,
-    textarea {
-
-        width: 95%;
-    }
-}
+    

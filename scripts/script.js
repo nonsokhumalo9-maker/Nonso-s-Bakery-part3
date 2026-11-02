@@ -4,29 +4,39 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    // ====================================
-    // PRODUCT SEARCH FUNCTION
-    // ====================================
+    // PRODUCT SEARCH
 
-    const searchInput = document.getElementById("searchInput");
+    const searchInput =
+    document.getElementById("searchInput");
 
     if (searchInput) {
 
         searchInput.addEventListener("keyup", function () {
 
-            const filter = this.value.toUpperCase();
+            const filter =
+            this.value.toUpperCase();
 
             const products =
-                document.querySelectorAll("#productList li");
+            document.querySelectorAll("#productList li");
 
             products.forEach(product => {
 
-                const text = product.textContent;
+                const text =
+                product.textContent;
 
-                if (text.toUpperCase().indexOf(filter) > -1) {
+                if (
+                    text.toUpperCase()
+                    .indexOf(filter) > -1
+                ) {
+
                     product.style.display = "";
-                } else {
+
+                }
+
+                else {
+
                     product.style.display = "none";
+
                 }
 
             });
@@ -35,9 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    // ====================================
     // TESTIMONIAL SLIDER
-    // ====================================
 
     const testimonials = [
 
@@ -56,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let testimonialIndex = 0;
 
     const testimonialBox =
-        document.getElementById("testimonialBox");
+    document.getElementById("testimonialBox");
 
     if (testimonialBox) {
 
@@ -64,33 +72,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
             testimonialIndex++;
 
-            if (testimonialIndex >= testimonials.length) {
+            if (
+                testimonialIndex >=
+                testimonials.length
+            ) {
+
                 testimonialIndex = 0;
+
             }
 
             testimonialBox.innerHTML =
-                testimonials[testimonialIndex];
+            testimonials[testimonialIndex];
 
         }, 3000);
 
     }
 
-    // ====================================
-    // ANIMATED COUNTERS
-    // ====================================
+    // COUNTERS
 
     function animateCounter(id, target) {
 
         const element =
-            document.getElementById(id);
+        document.getElementById(id);
 
         if (!element) return;
 
         let count = 0;
 
-        const speed = target / 100;
+        const speed =
+        target / 100;
 
-        const counter = setInterval(() => {
+        const counter =
+        setInterval(() => {
 
             count += Math.ceil(speed);
 
@@ -102,7 +115,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             }
 
-            element.innerHTML = count + "+";
+            element.innerHTML =
+            count + "+";
 
         }, 20);
 
@@ -114,20 +128,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     animateCounter("orders", 3200);
 
-    // ====================================
-    // DAILY SPECIAL MODAL
-    // ====================================
+    // SPECIAL OFFER MODAL
 
     const modal =
-        document.getElementById("specialModal");
+    document.getElementById("specialModal");
 
     const openBtn =
-        document.getElementById("specialBtn");
+    document.getElementById("specialBtn");
 
     const closeBtn =
-        document.querySelector(".close");
+    document.querySelector(".close");
 
-    if (modal && openBtn && closeBtn) {
+    if (
+        modal &&
+        openBtn &&
+        closeBtn
+    ) {
 
         openBtn.addEventListener("click", function () {
 
@@ -143,7 +159,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         window.addEventListener("click", function (event) {
 
-            if (event.target === modal) {
+            if (
+                event.target === modal
+            ) {
 
                 modal.style.display = "none";
 
@@ -153,12 +171,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    // ====================================
     // NEWSLETTER FORM
-    // ====================================
 
     const newsletterForm =
-        document.getElementById("newsletterForm");
+    document.getElementById("newsletterForm");
 
     if (newsletterForm) {
 
@@ -166,9 +182,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             e.preventDefault();
 
-            document.getElementById("newsletterMessage")
-                .innerHTML =
-                "? Thank you for subscribing to our newsletter!";
+            document.getElementById(
+                "newsletterMessage"
+            ).innerHTML =
+
+            "? Thank you for subscribing to our newsletter!";
 
             newsletterForm.reset();
 
@@ -176,12 +194,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    // ====================================
     // CONTACT FORM VALIDATION
-    // ====================================
 
     const contactForm =
-        document.getElementById("contactForm");
+    document.getElementById("contactForm");
 
     if (contactForm) {
 
@@ -190,32 +206,56 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
 
             const name =
-                document.getElementById("name").value;
+            document.getElementById("name").value.trim();
 
             const email =
-                document.getElementById("email").value;
+            document.getElementById("email").value.trim();
 
             const phone =
-                document.getElementById("phone").value;
+            document.getElementById("phone").value.trim();
+
+            const enquiry =
+            document.getElementById("enquiryType").value;
 
             const message =
-                document.getElementById("message").value;
+            document.getElementById("message").value.trim();
+
+            const terms =
+            document.getElementById("terms").checked;
 
             if (
+
                 name === "" ||
                 email === "" ||
                 phone === "" ||
-                message === ""
+                message === "" ||
+                enquiry === ""
+
             ) {
 
-                alert("Please complete all fields.");
+                alert(
+                "Please complete all required fields."
+                );
 
                 return;
+
             }
 
-            document.getElementById("successMessage")
-                .innerHTML =
-                "? Message sent successfully!";
+            if (!terms) {
+
+                alert(
+                "Please agree to the contact policy."
+                );
+
+                return;
+
+            }
+
+            document.getElementById(
+            "successMessage"
+            ).innerHTML =
+
+            "? Thank you for contacting Nonso's Bakery. Your enquiry has been received successfully and we will respond within 24 hours.";
 
             contactForm.reset();
 
@@ -223,23 +263,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    // ====================================
     // GALLERY LIGHTBOX
-    // ====================================
 
     const galleryImages =
-        document.querySelectorAll(".gallery-img");
+    document.querySelectorAll(".gallery-img");
 
     const lightbox =
-        document.getElementById("lightbox");
+    document.getElementById("lightbox");
 
     const lightboxImg =
-        document.getElementById("lightboxImg");
+    document.getElementById("lightboxImg");
 
     const closeLightbox =
-        document.getElementById("closeLightbox");
+    document.getElementById("closeLightbox");
 
-    if (galleryImages.length > 0) {
+    if (
+        galleryImages.length > 0
+    ) {
 
         galleryImages.forEach(image => {
 
@@ -247,7 +287,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 lightbox.style.display = "flex";
 
-                lightboxImg.src = image.src;
+                lightboxImg.src =
+                image.src;
 
             });
 
@@ -265,34 +306,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    // ====================================
     // GALLERY SEARCH
-    // ====================================
 
     const gallerySearch =
-        document.getElementById("gallerySearch");
+    document.getElementById("gallerySearch");
 
     if (gallerySearch) {
 
         gallerySearch.addEventListener("keyup", function () {
 
             const filter =
-                this.value.toUpperCase();
+            this.value.toUpperCase();
 
             const images =
-                document.querySelectorAll(".gallery img");
+            document.querySelectorAll(".gallery img");
 
             images.forEach(img => {
 
                 const alt =
-                    img.alt.toUpperCase();
+                img.alt.toUpperCase();
 
                 if (
                     alt.indexOf(filter) > -1
                 ) {
+
                     img.style.display = "";
-                } else {
+
+                }
+
+                else {
+
                     img.style.display = "none";
+
                 }
 
             });
@@ -301,25 +346,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    // ====================================
     // BACK TO TOP BUTTON
-    // ====================================
 
     const topBtn =
-        document.getElementById("topBtn");
+    document.getElementById("topBtn");
 
     if (topBtn) {
 
         window.addEventListener("scroll", function () {
 
             if (
+
                 document.body.scrollTop > 300 ||
                 document.documentElement.scrollTop > 300
+
             ) {
 
                 topBtn.style.display = "block";
 
-            } else {
+            }
+
+            else {
 
                 topBtn.style.display = "none";
 
@@ -330,20 +377,21 @@ document.addEventListener("DOMContentLoaded", function () {
         topBtn.addEventListener("click", function () {
 
             window.scrollTo({
+
                 top: 0,
+
                 behavior: "smooth"
+
             });
 
         });
 
     }
 
-    // ====================================
-    // OPENING HOURS ACCORDION
-    // ====================================
+    // ACCORDION
 
     const accordions =
-        document.querySelectorAll(".accordion");
+    document.querySelectorAll(".accordion");
 
     accordions.forEach(item => {
 
@@ -352,18 +400,23 @@ document.addEventListener("DOMContentLoaded", function () {
             this.classList.toggle("active");
 
             const panel =
-                this.nextElementSibling;
+            this.nextElementSibling;
 
             if (
+
                 panel.style.maxHeight
+
             ) {
 
                 panel.style.maxHeight = null;
 
-            } else {
+            }
+
+            else {
 
                 panel.style.maxHeight =
-                    panel.scrollHeight + "px";
+
+                panel.scrollHeight + "px";
 
             }
 
