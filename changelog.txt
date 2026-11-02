@@ -1,0 +1,47 @@
+/* General styling for all pages */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header and navigation */
+header {
+  background-color: #ffcc99;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  color: #d35400;
+}
+
+/* Section styling */
+section {
+  padding: 20px;
+}
+
+/* Gallery layout */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 250px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(

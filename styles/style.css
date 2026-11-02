@@ -1,0 +1,114 @@
+/* ===============================
+   Nonso's Bakery Website Styles
+   =============================== */
+
+/* General page styling */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif; /* Clean, readable font */
+  background: linear-gradient(to bottom, #fff8f0, #ffe5d9, #fceabb); /* Warm gradient background */
+  color: #333; /* Dark text for readability */
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 1s ease-in; /* Fade-in animation on page load */
+}
+
+/* Header styling with vibrant gradient */
+header {
+  background: linear-gradient(90deg, #ff9a76, #ff6f61, #d65a31, #f6d365, #fda085); /* Rich bakery tones */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Shadow for depth */
+}
+
+/* Navigation menu styling */
+nav {
+  background-color: #f8c291; /* Warm gold tone */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  border-radius: 8px; /* Rounded corners */
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s; /* Smooth hover transition */
+}
+
+nav a:hover {
+  color: #6d4c41; /* Chocolate brown hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Section styling */
+section {
+  padding: 20px;
+  text-align: center;
+  animation: slideUp 1s ease-in-out; /* Slide-up animation */
+}
+
+/* Gallery layout using CSS Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px; /* Rounded corners for images */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Shadow for depth */
+  transition: transform 0.4s, box-shadow 0.4s; /* Smooth hover effect */
+}
+
+.gallery img:hover {
+  transform: scale(1.05) rotate(1deg); /* Zoom + slight rotation */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4); /* Stronger shadow on hover */
+}
+
+/* Footer styling with gradient */
+footer {
+  background: linear-gradient(90deg, #d65a31, #ff6f61, #ff9a76, #f6d365, #fda085); /* Vibrant footer gradient */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; } /* Start invisible */
+  to { opacity: 1; }   /* End fully visible */
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; } /* Start lower + invisible */
+  to { transform: translateY(0); opacity: 1; }      /* End normal + visible */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack menu vertically */
+    gap: 10px;
+  }
+  section {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.2em; /* Smaller headings on mobile */
+  }
+  .gallery img {
+    border-radius: 8px; /* Slightly smaller rounding on mobile */
+  }
+}
