@@ -1,48 +1,229 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Gallery - Nonso's Bakery</title>
-  <link rel="stylesheet" href="styles/style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery | Nonso's Bakery</title>
+
+<meta name="description"
+content="Browse our collection of freshly baked breads, cakes, pastries, donuts, cookies and cupcakes.">
+
+<meta name="keywords"
+content="bakery gallery, cakes, pastries, bread, donuts, cupcakes">
+
+<meta name="author"
+content="Nonso Sinethemba Khumalo">
+
+<meta name="robots"
+content="index, follow">
+
+<link rel="stylesheet" href="styles/style.css">
+
 </head>
+
 <body>
-  <!-- Header with navigation -->
-  <header>
-    <h1>Our Bakery Gallery</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-      <a href="sitemap.html">Sitemap</a>
-    </nav>
-  </header>
 
-  <!-- Gallery introduction -->
-  <section>
-    <h2>Freshly Baked Goodness</h2>
-    <p>Take a look at some of our favorite creations — each one baked with love and care.</p>
-  </section>
+<header>
 
-  <!-- Gallery images -->
-  <section class="gallery">
-    <!-- Core bakery items -->
-    <img src="images/bread.jpg" alt="Freshly baked bread">
-    <img src="images/cake.jpg" alt="Decorated cake with raspberries">
-    <img src="images/pastry.jpg" alt="Golden puff pastry with berries">
+<h1>🖼️ Nonso's Bakery Gallery</h1>
 
-    <!-- Additional uploaded images -->
-    <img src="images/donuts.jpg" alt="Colorful donuts with toppings">
-    <img src="images/cookies.jpg" alt="Chocolate cookies with milk">
-    <img src="images/cupcakes.jpg" alt="Decorated cupcakes with colorful frosting">
-    <img src="images/bakery1.jpg" alt="Bakery interior with breads and cakes">
-    <img src="images/breads.jpg" alt="Assorted breads and croissants">
-  </section>
+<nav>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2026 Nonso's Bakery. All rights reserved.</p>
-  </footer>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+<a href="sitemap.html">Sitemap</a>
+
+</nav>
+
+</header>
+
+<main>
+
+<section>
+
+<h2>Freshly Baked Goodness</h2>
+
+<p>
+
+Explore our delicious collection of breads, cakes,
+pastries, cupcakes, cookies, and donuts. Click on any
+image to view it in a larger size.
+
+</p>
+
+</section>
+
+<section>
+
+<h2>Search Our Gallery</h2>
+
+<input
+type="text"
+id="gallerySearch"
+placeholder="Search bakery items...">
+
+</section>
+
+<section class="gallery">
+
+<div class="product-card">
+
+<img
+src="images/bread.jpg"
+alt="Whole Wheat Bread"
+class="gallery-img">
+
+<h3>Whole Wheat Bread</h3>
+
+<p>Freshly baked daily.</p>
+
+<p class="price">R25</p>
+
+</div>
+
+<div class="product-card">
+
+<img
+src="images/breads.jpg"
+alt="French Loaf"
+class="gallery-img">
+
+<h3>French Loaf</h3>
+
+<p>Traditional bakery favourite.</p>
+
+<p class="price">R30</p>
+
+</div>
+
+<div class="product-card">
+
+<img
+src="images/pastry.jpg"
+alt="Croissant"
+class="gallery-img">
+
+<h3>Croissant</h3>
+
+<p>Golden buttery pastry.</p>
+
+<p class="price">R22</p>
+
+</div>
+
+<div class="product-card">
+
+<img
+src="images/cake.jpg"
+alt="Chocolate Cake"
+class="gallery-img">
+
+<h3>Chocolate Cake</h3>
+
+<p>Rich chocolate flavour.</p>
+
+<p class="price">R220</p>
+
+</div>
+
+<div class="product-card">
+
+<img
+src="images/cupcakes.jpg"
+alt="Cupcakes"
+class="gallery-img">
+
+<h3>Cupcakes</h3>
+
+<p>Perfect for parties.</p>
+
+<p class="price">R15</p>
+
+</div>
+
+<div class="product-card">
+
+<img
+src="images/donuts.jpg"
+alt="Donuts"
+class="gallery-img">
+
+<h3>Donuts</h3>
+
+<p>Soft, sweet and delicious.</p>
+
+<p class="price">R12</p>
+
+</div>
+
+<div class="product-card">
+
+<img
+src="images/cookies.jpg"
+alt="Cookies"
+class="gallery-img">
+
+<h3>Cookies</h3>
+
+<p>Chocolate chip goodness.</p>
+
+<p class="price">R45 (6 Pack)</p>
+
+</div>
+
+<div class="product-card">
+
+<img
+src="images/bakery1.jpg"
+alt="Bakery Interior"
+class="gallery-img">
+
+<h3>Our Bakery</h3>
+
+<p>Fresh products every day.</p>
+
+<p class="price">Visit Us Today</p>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- LIGHTBOX -->
+
+<div id="lightbox">
+
+<span id="closeLightbox">&times;</span>
+
+<img id="lightboxImg"
+alt="Expanded Gallery Image">
+
+</div>
+
+<button id="topBtn">
+
+↑ Top
+
+</button>
+
+<footer>
+
+<p>
+
+© 2026 Nonso's Bakery.
+All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script src="scripts/script.js"></script>
+
 </body>
 </html>

@@ -1,50 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nonso’s Bakery</title>
-  <!-- Link to external CSS file -->
-  <link rel="stylesheet" href="styles/style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nonso's Bakery | Fresh Bread, Cakes & Pastries</title>
+
+<meta name="description"
+content="Fresh breads, cakes, pastries, cupcakes and donuts baked daily at Nonso's Bakery.">
+
+<meta name="keywords"
+content="bakery, cakes, bread, pastries, cupcakes, donuts">
+
+<meta name="author"
+content="Nonso Sinethemba Khumalo">
+
+<meta name="robots"
+content="index, follow">
+
+<link rel="stylesheet" href="styles/style.css">
+
 </head>
+
 <body>
-  <!-- Header section with site title and navigation -->
-  <header>
-    <h1>Welcome to Nonso’s Bakery</h1>
-    <nav>
-      <!-- Navigation menu linking all pages -->
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-      <a href="sitemap.html">Sitemap</a>
-    </nav>
-  </header>
 
-  <!-- Hero section with banner image -->
-  <section id="home">
-    <h2 style="color:#d65a31;">Freshly Baked Happiness</h2>
-    <p>We bake with love and deliver freshness daily. Explore our range of pastries, breads, and cakes made just for you.</p>
-    <!-- Bakery banner image -->
-    <img src="images/bakery-banner.jpg" alt="Bakery display banner" style="border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.3);">
-  </section>
+<header>
 
-  <!-- Products section listing bakery items -->
-  <section id="products">
-    <h2 style="color:#6d4c41;">Our Products</h2>
-    <ul style="list-style:none; padding:0;">
-      <li>🍞 Breads – Whole Wheat, Sourdough, French Loaf</li>
-      <li>🥐 Pastries – Croissants, Muffins, Danish</li>
-      <li>🍰 Cakes – Chocolate, Vanilla, Red Velvet</li>
-      <li>🧁 Cupcakes – Colorful, decorated, perfect for parties</li>
-      <li>🍩 Donuts – Glazed, sprinkled, and filled</li>
-      <li>🍪 Cookies – Chocolate chip, oatmeal, and more</li>
-    </ul>
-  </section>
+<h1>🥐 Welcome to Nonso's Bakery</h1>
 
-  <!-- Footer section -->
-  <footer>
-    <p>&copy; 2026 Nonso’s Bakery. All rights reserved.</p>
-  </footer>
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+<a href="sitemap.html">Sitemap</a>
+
+</nav>
+
+</header>
+
+<main>
+
+<section class="hero">
+
+<h2>Freshly Baked Happiness Every Day</h2>
+
+<p>
+
+At Nonso's Bakery we specialize in freshly baked breads,
+cakes, pastries, cupcakes and treats prepared daily using
+quality ingredients.
+
+</p>
+
+<img
+src="images/bakery-banner.jpg"
+alt="Bakery display banner">
+
+<br><br>
+
+<button id="specialBtn">
+
+🎁 View Today's Special
+
+</button>
+
+</section>
+
+<section class="search-section">
+
+<h2>Search Products</h2>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search bakery products...">
+
+<ul id="productList">
+
+<li>Whole Wheat Bread</li>
+<li>French Loaf</li>
+<li>Sourdough Bread</li>
+<li>Croissant</li>
+<li>Danish Pastry</li>
+<li>Muffin</li>
+<li>Chocolate Cake</li>
+<li>Vanilla Cake</li>
+<li>Red Velvet Cake</li>
+<li>Cupcake</li>
+<li>Donut</li>
+<li>Cookies</li>
+
+</ul>
+
+</section>
+
+<section class="featured-products">
+
+<h2>Our Popular Products</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+
+<img src="images/bread.jpg"
+alt="Bread">
+
+<h3>Whole Wheat Bread</h3>
+
+<p>Freshly baked daily</p>
+
+<p class="price">R25</p>
+
+</div>
+
+<div class="product-card">
+
+<img src="images/pastry.jpg"
+alt="Pastry">
+
+<h3>Croissant</h3>
+
+<p>Golden buttery pastry</p>
+
+<p class="price">R22</p>
+
+</div>
+
+<div class="product-card">
+
+<img src="images/cake.jpg"
+alt="Cake">
+
+<h3>Chocolate Cake</h3>
+
+<p>Rich and delicious</p>
+
+<p class="price">R220</p>
+
+</div>
+
+<div class="product-card">
+
+<img src="images/cupcakes.jpg"
+alt="Cupcakes">
+
+<h3>Cupcake</h3>
+
+<p>Perfect for celebrations</p>
+
+<p class="price">R15</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<h2>Our Achievements</h2>
+
+<div class="stat-box">
+
+<h3 id="customers">0</h3>
+
+<p>Happy Customers</p>
+
+</div>
+
+<div class="stat-box">
+
+<h3 id="cakes">0</h3>
+
+<p>Cakes Sold</p>
+
+</div>
+
+<div class="stat-box">
+
+<h3 id="orders">0</h3>
+
+<p>Orders Completed</p>
+
+</div>
+
+</section>
+
+<section class="testimonials">
+
+<h2>Customer Reviews</h2>
+
+<div id="testimonialBox">
+
+⭐⭐⭐⭐⭐ Best bakery in Johannesburg!
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Join Our Newsletter</h2>
+
+<form id="newsletterForm">
+
+<input
+type="email"
+id="newsletterEmail"
+placeholder="Enter your email"
+required>
+
+<button type="submit">
+
+Subscribe
+
+</button>
+
+</form>
+
+<p id="newsletterMessage"></p>
+
+</section>
+
+</main>
+
+<div id="specialModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close">&times;</span>
+
+<h2>Today's Special</h2>
+
+<p>
+
+🥐 Buy 2 Croissants and Get 1 FREE!
+
+</p>
+
+<p>
+
+Offer valid while stocks last.
+
+</p>
+
+</div>
+
+</div>
+
+<button id="topBtn">
+
+↑ Top
+
+</button>
+
+<footer>
+
+<p>
+
+© 2026 Nonso's Bakery.
+All Rights Reserved.
+
+</p>
+
+</footer>
+
+<script src="scripts/script.js"></script>
+
 </body>
 </html>
